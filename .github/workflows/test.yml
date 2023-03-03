@@ -19,7 +19,7 @@ jobs:
       - name: Install php dependencies
         run: composer install --no-ansi --no-interaction --no-plugins --no-progress --no-scripts --optimize-autoloader
       - name: Start MySQL 8.0
-        run: sudo systemctl start mysql && mysql -uroot -proot -e 'CREATE DATABASE fullstack_challenge_test;'
+        run: sudo systemctl start mysql && mysql -uroot -proot -e 'CREATE DATABASE weather_list_test;'
       - name: Copy test env file
         run: cp .env.test .env
       - name: Run tests
