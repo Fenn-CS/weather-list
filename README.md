@@ -15,7 +15,9 @@ The backend is built on [Laravel](https://laravel.com/docs) and the frontend in 
 
 - Clone repository: `git clone git@github.com:Fenn-CS/weather-list.git`
 ### API
-- Navigate to api dir; `cd /api` 
+- Navigate to api dir: `cd /api`
+- Setup environment file: `cp .env.example .env`
+    - Make sure to set `OPEN_WEATHER_MAP_BASE_URL="https://api.openweathermap.org/data/2.5/"` and your corresponding API Key via `OPEN_WEATHER_MAP_API_KEY="REDACTED-SECRET"`
 - Start docker containers `docker compose up` (add `-d` to run detached)
 - Connect to container to run commands: `docker-compose exec app bash`
   - Make sure you are in the `/var/www/html` path
