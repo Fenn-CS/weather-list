@@ -19,7 +19,7 @@ The backend is built on [Laravel](https://laravel.com/docs) and the frontend in 
 - Setup environment file: `cp .env.example .env`
     - Make sure to set `OPEN_WEATHER_MAP_BASE_URL="https://api.openweathermap.org/data/2.5/"` and your corresponding API Key via `OPEN_WEATHER_MAP_API_KEY="REDACTED-SECRET"`
 - Start docker containers `docker compose up` (add `-d` to run detached)
-- Connect to container to run commands: `docker-compose exec app bash`
+- Connect to container to run commands: `docker-compose run app bash`
   - Make sure you are in the `/var/www/html` path
   - Install php dependencies: `composer install`
   - Setup app key: `php artisan key:generate`
@@ -27,6 +27,12 @@ The backend is built on [Laravel](https://laravel.com/docs) and the frontend in 
   - Seed database: `php artisan db:seed`
   - Run tests: `php artisan test`
 - Visit api: `http://localhost:8000`
+
+### Sysadmin
+
+We have a background activity that is run every hour to update user-weather information. The sysadmin can force update or rush the queue by running: 
+
+- `php artisan fetch:weather-data`
 
 ### Frontend
 - Navigate to client dir; `cd /frontend` 
