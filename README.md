@@ -1,6 +1,9 @@
 # Weather-List
 
 Stay ahead of the weather with our Laravel and VueJS powered app. Keep track of the forecast for a set of users and plan your day accordingly. With intuitive design and reliable weather data from top APIs, our app has got you covered, rain or shine. Download now and never get caught in the rain again.
+
+<img src="./weather-list.png" />
+
 ## Development Instructions
 
 The backend is built on [Laravel](https://laravel.com/docs) and the frontend in [VueJS](https://vuejs.org/guide/introduction.html) please consult their respective documentations for more information about these technologies.

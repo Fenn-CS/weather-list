@@ -17,21 +17,21 @@ class PublicController extends Controller
     public function getUsers()
     {
         return response()->json([
-            'users' => \App\Models\User::all(),
+            \App\Models\User::all()
         ]);
     }
 
     public function getUser(int $id)
     {
         $user = User::find($id);
-        if(!$user) {
+        if (!$user) {
             return response()->json([
                 'message' => 'User not found',
             ], 404);
         }
 
         return response()->json([
-            'user' => $user,
+            $user
         ]);
     }
 }

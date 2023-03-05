@@ -1,0 +1,10 @@
+.inner-table,
+.inner-table td,
+.inner-table th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.inner-table {
+    padding: 10px;
+}
